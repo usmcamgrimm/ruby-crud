@@ -1,2 +1,27 @@
-<h1>Players#new</h1>
-<p>Find me in app/views/players/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 mb-4 display-4">New Player</h4>
+  </div>
+  <div class="row justify-content-center">
+    <%= form_with scope: :post, url: posts_path, local: true do |form| %>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :number %>
+        <%= form.text_area :number, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :position %>
+        <%= form.text_area :position, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :college %>
+        <%= form.text_area :college, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.submit class: 'form-control btn-primary' %>
+      </div>
+  </div>
+</div>
